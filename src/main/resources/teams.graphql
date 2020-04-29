@@ -1,0 +1,14 @@
+type User {
+  id: Long
+  name: String
+}
+
+type Team {
+  id: Long
+  name: String
+  users: [User]
+}
+
+type Query {
+  allTeams(excluding: String = ""): [Team]
+}
